@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class FileMetaDTO {
+
     private UUID hash;
     private String fileName;
 

@@ -11,7 +11,6 @@ import org.springframework.lang.NonNull;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 import org.sql2o.Sql2o;
-
 import javax.sql.DataSource;
 
 @Configuration

@@ -27,7 +27,6 @@ public class FileMetaProvider implements IFileMetaProvider {
     private static final String SAVE_USER_FILE = "insert into vma.files_users_info_metada (hash, user_id)\n" +
             "values (:hash, :finame, :subtype)";
 
-
     private final Sql2o sql2o;
 
     public FileMetaProvider(@Autowired Sql2o sql2o) {
