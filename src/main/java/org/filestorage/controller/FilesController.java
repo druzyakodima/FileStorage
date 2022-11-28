@@ -2,7 +2,6 @@ package org.filestorage.controller;
 
 
 import org.filestorage.service.IFileStoreService;
-import org.filestorage.specifications.FileSystemProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
@@ -20,7 +19,6 @@ import java.util.UUID;
 public class FilesController {
 
     private IFileStoreService fileStoreService;
-    private FileSystemProvider fileSystemProvider;
 
     @Autowired
     public FilesController(IFileStoreService fileStoreService) {
@@ -31,7 +29,7 @@ public class FilesController {
     public ResponseEntity<String> uploadFile(
             @RequestParam("file") MultipartFile file,
             @RequestParam("subtype") int subType,
-            @RequestParam ("userId") Long userId
+            @RequestParam("userId") Long userId
     ) throws IOException, NoSuchAlgorithmException, InterruptedException {
 
         if (file.isEmpty()) {
